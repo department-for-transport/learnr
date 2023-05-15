@@ -416,12 +416,6 @@ evaluate_exercise <- function(
     rlang::return_from(here, res)
   }
 
-  # Check that user R code is parsable -------------------------------------
-  if (is_exercise_engine(exercise, "r")) {
-    return_if_exercise_result(
-      exercise_check_code_is_parsable(exercise)
-    )
-  }
 
   # Code check, pre-evaluation ---------------------------------------------
   if (nzchar(exercise$code_check)) {
